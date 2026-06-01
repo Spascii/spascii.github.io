@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="data:," />
+    <title>Spascii</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet" />
+    <script type="module" crossorigin src="/assets/index-BHb2vgGv.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DyDuPsZY.css">
+  </head>
+  <body>
+    <!-- Vue spatiale 3D convertie en ASCII (three.js AsciiEffect) -->
+    <div id="app"></div>
+
+    <!-- Surcouche cockpit + HUD (texte ASCII, construite par src/hud.js) -->
+    <div id="hud"></div>
+
+    <!-- Menu de demarrage (portrait) : titre + Play / Commands / Mute.
+         Contenu construit par src/menu.js ; affiche/masque par controls.js. -->
+    <div id="menu"></div>
+
+    <!-- Ecran trop petit (< 800px) : overlay plein ecran, purement CSS (cf. media
+         query dans style.css). Masque tout tant que la fenetre est trop etroite. -->
+    <div id="too-small">
+      <div class="too-small-box">
+        <div class="too-small-title">Spascii</div>
+        <p>Screen too small.</p>
+        <p>Resize your window to at least 800px wide to fly.</p>
+      </div>
+    </div>
+
+  </body>
+</html>
