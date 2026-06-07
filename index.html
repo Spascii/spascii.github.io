@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="/assets/index-CI48Xr50.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-iImtPJJV.css">
+    <script type="module" crossorigin src="/assets/index-Dt2iQcaU.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DnAtCpQp.css">
   </head>
   <body>
     <!-- Vue spatiale 3D convertie en ASCII (three.js AsciiEffect) -->
@@ -22,6 +22,16 @@
     <!-- Menu de demarrage (portrait) : titre + Play / Commands / Mute.
          Contenu construit par src/menu.js ; affiche/masque par controls.js. -->
     <div id="menu"></div>
+
+    <!-- Ecran de chargement : visible des le premier paint (couvre le chargement
+         du bundle JS PUIS celui de la sauvegarde locale, cf. main.js qui attend
+         loadSave() avant de demarrer et retire cet overlay a la fin du boot). -->
+    <div id="loading">
+      <div class="loading-box">
+        <div class="loading-title">Spascii</div>
+        <div class="loading-label">LOADING<span class="loading-dots"><span>.</span><span>.</span><span>.</span></span></div>
+      </div>
+    </div>
 
     <!-- Ecran trop petit (< 800px) : overlay plein ecran, purement CSS (cf. media
          query dans style.css). Masque tout tant que la fenetre est trop etroite. -->
